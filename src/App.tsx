@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+const asset = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\/+/, "")}`;
 
 type Variant = {
   key: "original" | "bigpaw";
