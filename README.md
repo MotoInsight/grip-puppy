@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# grip-puppy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small, modern web UI built with React and TypeScript.
 
-Currently, two official plugins are available:
+## What is this?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**grip-puppy** is a lightweight frontend project used to render a fast, responsive web page with a clean UI and minimal overhead.
 
-## React Compiler
+The project focuses on:
+- Simple, maintainable UI code
+- Fast page load and interaction
+- Modern frontend best practices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+It is intended to serve as:
+- A standalone UI page
+- A prototype or internal tool
+- A foundation for expanding into a larger frontend application
 
-## Expanding the ESLint configuration
+(Replace this section with a more concrete description of the page’s purpose if needed.)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## How it is built
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The page is built using a modern frontend stack:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React**  
+  Component-based UI for building interactive pages.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **TypeScript**  
+  Adds static typing for safer, more predictable code.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Vite**  
+  Used as the build tool and dev environment for fast startup and builds.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Tailwind CSS**  
+  Utility-first CSS framework for styling without large custom stylesheets.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **ESLint**  
+  Helps enforce consistent code quality and style.
+
+## Project philosophy
+
+- Keep the UI small and focused
+- Prefer simple components over complex abstractions
+- Use widely adopted tools to reduce maintenance cost
+- Optimize for clarity and readability over cleverness
+
+## Repo layout (high level)
+
+- `src/` – React components and application logic  
+- `public/` – Static assets  
+- Root config files – Build, linting, and styling configuration
+
+## Status
+
+This project is under active development and may evolve as requirements change.
